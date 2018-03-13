@@ -11,6 +11,6 @@ block content
                         h3 #{product.thumbnail}
                         p #{product.description}
                         p
-                            a.btn.btn-primary(href='#', role='button') Add to basket
+                            a.btn.btn-primary(href='/add_to_basket/#{product.product_id}', role='button') Add to basket
                             a.btn.btn-default(href='#', role='button') View
 
