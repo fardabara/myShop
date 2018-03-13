@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    .panel.panel-primary
+        .panel-heading
+            h1.text-center Register Page
+        .panel-body
+            form(method="post" action="/user/register")
+                .form-group
+                    label(for="username") Username:
+                    input.form-control(type="text" id="username" name="username")
+                .form-group
+                    label(for="password") Password:
+                    input.form-control(type="password" id="password" name="password")
+                .form-group
+                    label(for="confirm_password") Confirm Password:
+                    input.form-control(type="password" id="confirm_password" name="confirm_password")
+                .form-group
+                    button.btn.btn-success(onclick="login()") Login
+        .panel-footer
+            p.text-center If you have an account ? click&nbsp;
+                a(href="/user/login") Login!
