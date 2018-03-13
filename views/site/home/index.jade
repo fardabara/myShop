@@ -1,4 +1,16 @@
 extends ../layout
 
 block content
-    h1 Hello world
+
+    .row
+        each product, index in products
+            .col-md-3
+                .thumbnail
+                    img(src='#{product.image}', alt='...')
+                    .caption
+                        h3 #{product.thumbnail}
+                        p #{product.description}
+                        p
+                            a.btn.btn-primary(href='#', role='button') Add to basket
+                            a.btn.btn-default(href='#', role='button') View
+
